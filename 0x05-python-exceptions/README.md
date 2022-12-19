@@ -1,5 +1,3 @@
-test_files ----- folder holds main.c test files that showcase examples of how to use functions
-Files that start with:
 prints x elements in list and returns num printed
 prints values if integer; returns True or False to integer
 prints first x elements of a list and only integers
