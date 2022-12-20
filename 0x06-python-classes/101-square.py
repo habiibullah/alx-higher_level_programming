@@ -1,4 +1,4 @@
-       #!/usr/bin/python3
+#!/usr/bin/python3
 """
 Module 101-square
 Defines class Square with private size & position; and public area & my_print
@@ -104,6 +104,6 @@ class Square:
 
         string += "\n" * self.position[1]
         string += "\n".join([" " * self.__position[0] +
-                             "#" * self.__size
-                             for rows in range(self.__size)])
-        return string
+       "#" * self.__size
+        for rows in range(self.__size)])
+            return string
