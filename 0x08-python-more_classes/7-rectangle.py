@@ -1,4 +1,4 @@
-  #!/usr/bin/python3
+#!/usr/bin/python3
 """
 Module 7-rectangle
 Contains class Rectangle with private attribute width and height,
@@ -7,7 +7,7 @@ deletes, and has public attribute to keep track of number of instances
 """
 
 
-class Rectangle():
+class Rectangle:
     """
     Defines class rectangle with private attribute width and height
     Args:

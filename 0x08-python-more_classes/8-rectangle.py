@@ -1,4 +1,4 @@
-  #!/usr/bin/python3
+#!/usr/bin/python3
 """
 Module 8-rectangle
 Contains class Rectangle with private attribute width and height,
@@ -8,7 +8,7 @@ and has static method that returns bigger rectangle out of two given
 """
 
 
-class Rectangle():
+class Rectangle:
     """
     Defines class rectangle with private attribute width and height
     Args:

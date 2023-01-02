@@ -1,4 +1,4 @@
-  #!/usr/bin/python3
+#!/usr/bin/python3
 """
 Module 9-rectangle
 Contains class Rectangle with private attribute width and height,
@@ -9,7 +9,7 @@ and has class method that returns a new class instance via square
 """
 
 
-class Rectangle():
+class Rectangle:
     """
     Defines class rectangle with private attribute width and height
     Args:
