@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""Defines a file-writing function."""
+"""
+Module 5-to_json_string
+Contains function that returns JSON representation of obj (string)
+"""
 
 
-def write_file(filename="", text=""):
-    """Write a string to a UTF8 text file.
+def to_json_string(my_obj):
+    """Returns JSON representation of obj (string)
     Args:
-        filename (str): The name of the file to write.
-        text (str): The text to write to the file.
-    Returns:
-        The number of characters written.
+        my_obj: python object
+    Return:
+        json string representation
     """
-    with open(filename, "w", encoding="utf-8") as f:
-        return f.write(text)
+    import json
+
+    return json.dumps(my_obj)

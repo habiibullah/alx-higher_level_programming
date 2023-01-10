@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""Defines a file-appending function."""
+"""
+Module 5-to_json_string
+Contains function that returns JSON representation of obj (string)
+"""
 
 
-def append_write(filename="", text=""):
-    """Appends a string to the end of a UTF8 text file.
+def to_json_string(my_obj):
+    """Returns JSON representation of obj (string)
     Args:
-        filename (str): The name of the file to append to.
-        text (str): The string to append to the file.
-    Returns:
-        The number of characters appended.
+        my_obj: python object
+    Return:
+        json string representation
     """
-    with open(filename, "a", encoding="utf-8") as f:
-        return f.write(text)
+    import json
+
+    return json.dumps(my_obj)
