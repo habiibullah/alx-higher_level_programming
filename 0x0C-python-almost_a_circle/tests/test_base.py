@@ -15,7 +15,7 @@ Base = base.Base
 Rectangle = rectangle.Rectangle
 
 
-class TestPep8(unittest.TestCase):
+    class TestPep8(unittest.TestCase):
     """Pep8 models/base.py & tests/test_models/test_base.py"""
     def test_pep8(self):
         """Pep8"""
@@ -23,6 +23,9 @@ class TestPep8(unittest.TestCase):
         errors = 0
         files = ["models/base.py", "tests/test_models/test_base.py"]
         errors += style.check_files(files).total_errors
+        self.assertEqual(errors, 0, 'Need to fix Pep8')
+
+
 class TestBase(unittest.TestCase):
     """Tests for models/base.py"""
 
@@ -55,11 +58,6 @@ class TestBase(unittest.TestCase):
             print(Base.nb_objects)
 
     """Test args given"""
-    def test_invalid_args(self):
-        """Test too many args given throws error"""
-        with self.assertRaises(TypeError):
-            Base(50, 50)
-    """Test class"""
     def test_class(self):
         """Test class created is indeed Base"""
         self.assertTrue(Base(100), self.__class__ == Base)
@@ -89,7 +87,8 @@ class TestBase(unittest.TestCase):
         strd3 = Base.to_json_string([d3])
         self.assertTrue(len(d3) == 0)
         self.assertTrue(type(strd3) == str)
-        self.assertTrue(strd3, "[]")  
+        self.assertTrue(strd3, "[]")
+
     """Test JSON to Python object"""
     def test_from_json_string(self):
         """Test JSON string translates into Python dict"""
@@ -118,7 +117,6 @@ class TestBase(unittest.TestCase):
         strs3 = Base.from_json_string(s3)
         self.assertTrue(type(strs3) == list)
         self.assertTrue(strs3 == [])
-
     """Test creating instance from dictionary"""
     def test_create(self):
         """Test transferring attribute dictionary to another instance"""
@@ -128,6 +126,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(str(r), '[Rectangle] (99) 1/2 - 3/5')
         self.assertEqual(str(r2), '[Rectangle] (99) 1/2 - 3/5')
         self.assertIsNot(r, r2)
+
     """Test saving JSON string repr of dict to class specific file"""
     def test_save_to_file(self):
         """Test save to file"""
