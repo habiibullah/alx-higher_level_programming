@@ -1,4 +1,3 @@
 #!/bin/bash
-# Take in URL, display all methods accepted; Usage: ./3-methods.sh 0.0.0.0:5000/route_4
-curl -sI "$1" | grep 'Allow:' | cut -f2- -d' '
-
+# This script takes in a URL and displays all HTTP methods the server will accept.
+curl -sI "$1" -X OPTIONS | grep "Allow:" | cut -d':' -f2 | sed 's/ //'
